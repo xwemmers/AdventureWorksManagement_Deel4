@@ -1,0 +1,95 @@
+﻿<Window x:Class="AdventureWorksManagement.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdventureWorksManagement"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="1000" MinHeight="850" Width="700" MinWidth="500">
+    <Grid DataContext="{Binding CurrentProduct}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="ComboBox">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+            </Style>
+        </Grid.Resources>
+
+        <Label>Product ID</Label>
+        <Label Grid.Row="1">Name</Label>
+        <Label Grid.Row="2">Product Number</Label>
+            <Label Grid.Row="3">Color</Label>
+        <Label Grid.Row="4">Standard Cost</Label>
+        <Label Grid.Row="5">List Price</Label>
+        <Label Grid.Row="6">Size</Label>
+        <Label Grid.Row="7">Weight</Label>
+        <Label Grid.Row="8">Product Category ID</Label>
+        <Label Grid.Row="9">Product Model ID</Label>
+        <Label Grid.Row="10">Sell Start Date</Label>
+        <Label Grid.Row="11">Sell End Date</Label>
+        <Label Grid.Row="12">Discontinued Date</Label>
+
+        <TextBox Grid.Column="1" Text="{Binding ProductID}" IsReadOnly="True"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding Name}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding ProductNumber}" IsReadOnly="True"></TextBox>
+        <!--<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Color}"></TextBox>-->
+        <ComboBox Grid.Column="1" Grid.Row="3" Name="cbxColors" SelectedItem="{Binding Color}"></ComboBox>
+        <TextBox Grid.Column="1" Grid.Row="4" Text="{Binding StandardCost}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding ListPrice}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Size}"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="7" Text="{Binding Weight}"></TextBox>
+        <ComboBox Grid.Column="1" Grid.Row="8" Name="cbxSubcategories" SelectedValue="{Binding ProductCategoryID}" ItemsSource="{Binding Subcategories}" DisplayMemberPath="Name" SelectedValuePath="ProductCategoryID"></ComboBox>
+        <TextBox Grid.Column="1" Grid.Row="9" Text="{Binding ProductModelID}"></TextBox>
+        <DatePicker Grid.Column="1" Grid.Row="10" SelectedDate="{Binding SellStartDate}"></DatePicker>
+        <DatePicker Grid.Column="1" Grid.Row="11" SelectedDate="{Binding SellEndDate}"></DatePicker>
+        <DatePicker Grid.Column="1" Grid.Row="12" SelectedDate="{Binding DiscontinuedDate}"></DatePicker>
+
+        <Grid Grid.Column="1" Grid.Row="13">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="20,20" />
+                </Style>
+            </Grid.Resources>
+            <Button Click="Button_Click_1">Opslaan</Button>
+            <Button Grid.Column="1" Click="Button_Click">Annuleren</Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\AWM.BusinessLayer.dll
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\AWM.BusinessLayer.pdb
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\AWM.DataLayer.dll
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\AWM.DataLayer.pdb
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\AWM.DataLayer.dll.config
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\bin\Debug\EntityFramework.xml
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\obj\Debug\AWM.BusinessLayer.csprojAssemblyReference.cache
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\obj\Debug\AWM.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\obj\Debug\AWM.BusinessLayer.csproj.CopyComplete
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\obj\Debug\AWM.BusinessLayer.dll
+C:\VSProjects\AdventureWorksManagement\AWM.BusinessLayer\obj\Debug\AWM.BusinessLayer.pdb
